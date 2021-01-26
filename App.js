@@ -1,6 +1,7 @@
 import React, {useState, useEffect,useRef} from 'react';
 import api from './src/services/api'
 import { StyleSheet, Text, View,TextInput,TouchableOpacity,SafeAreaView, Keyboard } from 'react-native';
+import {FontAwesome } from '@expo/vector-icons'
 
 export default function App() {
   const [cep, setCep ] = useState('');
@@ -35,7 +36,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={{alignItems: 'center'}}>
-        <Text style={styles.text}>Digite o Cep desejado</Text>
+        <Text style={styles.text}>Digite o CEP desejado</Text>
         <TextInput 
         style={styles.input}
         placeholder='Ex: 25850000'
@@ -48,6 +49,9 @@ export default function App() {
           <TouchableOpacity
            style={[styles.button, {backgroundColor:'#1d7ca1'}]}
            onPress={buscar}>
+             <FontAwesome name="search"
+             size={18}
+             color="#FFF"/>
             <Text style={styles.buttonText}>
               Buscar
             </Text>
@@ -56,6 +60,9 @@ export default function App() {
           <TouchableOpacity 
           style={[styles.button, {backgroundColor: 'red'}]}
           onPress={limpar}>
+             <FontAwesome name="trash"
+             size={18}
+             color="#FFF"/>
             <Text style={styles.buttonText}>
               Limpar
             </Text>
