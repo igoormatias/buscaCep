@@ -84,13 +84,7 @@ export default function Home({navigation}) {
       <Text style={styles.resultText}> Estado: {cepUser.uf}</Text>
 
     </View>}
-    <View style={styles.buttonContainer}>
-    <Button style={styles.about}
-    title="Sobre"
-    onPress={() => navigation.navigate('About')}>
-     </Button>
-
-    </View>
+   
     
     </SafeAreaView>
 
